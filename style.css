@@ -1,40 +1,67 @@
-/* style.css */
-
-/* ... (outras regras como :root, body, card permanecem as mesmas) ... */
-
-/* ------------------ ESTILOS DOS BOTÕES (CORRIGIDO) ------------------ */
-.buttons {
+body {
     display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    background-color: #FF6EB4;
 }
 
-button {
-    /* ... (Estilos de padding, font-size, border-radius, etc. permanecem os mesmos) ... */
-    padding: 12px 25px;
-    font-size: 1.1em;
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 600px;
+    width: 600px;
+
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card > .question p {
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-yes, .btn-no {
+    height: 48px;
+    width: 100px;
+
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    border: none;
-    border-radius: 15px;
-    transition: background-color 0.3s, transform 0.1s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-yes {
-    /* NOVO: SIM AGORA É ROSA */
-    background-color: #FF69B4; /* Cor Rosa vibrante (Hot Pink) */
-    color: white;
+    background-color: #9AFF9A;
 }
 
 .btn-no {
-    /* NOVO: NÃO AGORA É PRETO */
-    background-color: #000000; /* Preto sólido */
-    color: white;
+    background-color: #FF4040;
+    color: #fff;
 }
 
-button:hover {
-    transform: scale(1.05);
+.answer {
+    display: none;
 }
 
-/* ... (o resto do CSS permanece o mesmo) ... */
+.answer > p {
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FF6EB4;
+    text-shadow: 1px 1px #000;
+}
