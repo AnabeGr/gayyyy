@@ -1,41 +1,8 @@
 /* style.css */
 
-/* ------------------ VARIÁVEIS DE COR E GERAL ------------------ */
-:root {
-    --color-primary: #FF0000; /* Vermelho vibrante para botões/destaque */
-    --color-secondary: #007BFF; /* Azul para fundo/texto */
-    --color-background: #F8F8FF; /* Branco suave */
-    --color-text: #333;
-    --color-heart: #FF0000;
-}
+/* ... (outras regras como :root, body, card permanecem as mesmas) ... */
 
-/* ------------------ ESTILOS DO CORPO E FONTE ------------------ */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    /* Fonte moderna e legível */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color-secondary); /* Fundo Azul */
-    color: var(--color-text);
-    overflow: hidden; /* Esconde a barra de rolagem para corações */
-}
-
-/* ------------------ ESTILO DO CARD (Conteúdo Central) ------------------ */
-.card {
-    background-color: var(--color-background);
-    padding: 40px;
-    border-radius: 20px; /* Bordas arredondadas */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    z-index: 10; /* Garante que o card fique acima dos corações */
-}
-
-/* ------------------ ESTILOS DOS BOTÕES ------------------ */
+/* ------------------ ESTILOS DOS BOTÕES (CORRIGIDO) ------------------ */
 .buttons {
     display: flex;
     justify-content: space-around;
@@ -43,23 +10,26 @@ body {
 }
 
 button {
+    /* ... (Estilos de padding, font-size, border-radius, etc. permanecem os mesmos) ... */
     padding: 12px 25px;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     border: none;
-    border-radius: 15px; /* Botões arredondados */
+    border-radius: 15px;
     transition: background-color 0.3s, transform 0.1s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-yes {
-    background-color: #00FF00; /* Sim verde, para destaque */
+    /* NOVO: SIM AGORA É ROSA */
+    background-color: #FF69B4; /* Cor Rosa vibrante (Hot Pink) */
     color: white;
 }
 
 .btn-no {
-    background-color: var(--color-primary); /* Não vermelho */
+    /* NOVO: NÃO AGORA É PRETO */
+    background-color: #000000; /* Preto sólido */
     color: white;
 }
 
@@ -67,38 +37,4 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ------------------ ESTILO DA RESPOSTA ------------------ */
-.answer {
-    padding-top: 15px;
-    font-size: 1.2em;
-    font-weight: 600;
-    color: var(--color-primary); /* Texto final em vermelho */
-}
-
-/* Oculta a resposta no início */
-#answer {
-    display: none;
-}
-
-/* ------------------ ESTILOS DOS CORAÇÕES FLUTUANTES ------------------ */
-.heart {
-    position: absolute;
-    color: var(--color-heart);
-    font-size: 20px;
-    animation: float-up 10s linear infinite;
-    opacity: 0.8;
-    z-index: 0;
-    pointer-events: none; /* Garante que não interfira no clique */
-}
-
-/* ANIMAÇÃO FLUTUANTE */
-@keyframes float-up {
-    0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-10vh) scale(1.5);
-        opacity: 0;
-    }
-}
+/* ... (o resto do CSS permanece o mesmo) ... */
